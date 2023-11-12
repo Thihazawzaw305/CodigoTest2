@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlMovie"
+    android:layout_width="@dimen/width_movie_item"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_medium_2">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnFavFromMovie"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/margin_card_medium_2"
+        android:elevation="@dimen/margin_card_medium_2"
+        android:src="@drawable/ic_baseline_favorite_border_24_white"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMovieImage"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/placeholder_st_image" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMovieName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivMovieImage"
+        android:layout_marginTop="@dimen/margin_card_medium_2"
+        android:text="Stranger Thing"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMovieRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMovieName"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="8.60"
+        android:textColor="@color/white" />
+
+    <RatingBar
+        android:id="@+id/rbrMovieRating"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMovieName"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small_n"
+        android:layout_toEndOf="@id/tvMovieRating"
+        android:numStars="5"
+        android:progress="5"
+        android:progressTint="@color/colorAccent"
+        android:rating="5" />
+
+
+</RelativeLayout>
